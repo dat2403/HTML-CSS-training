@@ -1,0 +1,187 @@
+.header {
+  height: 120px;
+  background-image: linear-gradient(0, #fd6332, #f53f2e);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar__list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 4px;
+}
+
+.navbar__item {
+  margin: 0 8px;
+  position: relative;
+}
+
+.navbar__item,
+.navbar__item-link {
+  /* Block = tính chất khối, có thể set width height */
+  /* Inline-block: giữ lại tính chất khối nhưng nằm trên cùng 1 hàng */
+  display: inline-block;
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 300;
+  color: var(--white-color);
+}
+
+.navbar__item:hover,
+.navbar__item-link:hover {
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.navbar__item--bold {
+  font-weight: 400;
+}
+
+.navbar__item--separate::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-left: 1px solid #fb9086;
+  height: 12px;
+  right: -9px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar__item-icon-link {
+  color: var(--white-color);
+  text-decoration: none;
+  margin: 0 3px;
+  font-size: 1.8rem;
+}
+
+.navbar-item_icon {
+  margin: 4px 3px;
+  font-size: 1.8rem;
+}
+
+/* QR CODE */
+.qr-code__container {
+  position: absolute;
+  left: 0;
+  /* top: 100% la cach top 100% chieu cao thang relative cha */
+  /* Thu thuat hien menu */
+  top: 150%;
+  width: 200px;
+  background-color: var(--white-color);
+  padding: 7px;
+  display: none;
+  animation: fadeIn ease-in 0.5s;
+}
+/* Show QR code when hover */
+.navbar__item--showQR:hover > .qr-code__container {
+  display: block;
+}
+
+.qr-code__image {
+  width: 100%;
+}
+
+.app-download {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.qr-link:nth-child(1) {
+  margin-left: 11px;
+}
+.qr-link:nth-child(2) {
+  margin-right: 11px;
+}
+
+.platform-image {
+  height: 16px;
+}
+
+/* Header Notification */
+
+.header__notify {
+  width: 404px;
+  position: absolute;
+  top: 118%;
+  right: 0;
+  background: var(--white-color);
+  border: 1px solid #d3d3d3;
+  display: none;
+  animation: fadeIn ease-in-out 0.3s;
+}
+
+.navbar-item_show-notify:hover > .header__notify {
+  display: block;
+}
+
+.header__notify-header {
+  height: 40px;
+  background: var(--white-color);
+}
+
+.header__notify-header > h3 {
+  color: #999;
+  padding: 0;
+  margin: 0 0 0 12px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+
+.header__notify-list {
+  padding-left: 0;
+}
+
+.header__notify-item {
+}
+.header__notify-link {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.header__notify-link:hover {
+  background-color: rgba(238, 75, 143, 0.08);
+}
+
+.header__notify-image {
+  width: 48px;
+  object-fit: contain;
+}
+.header__notify-content {
+  flex-grow: 1;
+  margin-left: 12px;
+}
+.header__notify-name {
+  display: block;
+  color: var(--black-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.header__notify-desc {
+  display: block;
+  color: #666;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin-top: 4px;
+}
+
+.header__notify-footer {
+    display: flex;
+}
+
+.header__notify-footer-btn {
+    text-decoration: none;
+    color: var(--black-color);
+    padding: 14px 48px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
